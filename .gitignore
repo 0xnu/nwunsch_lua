@@ -1,7 +1,9 @@
 # Others
+.busted
 .vscode
 push.sh
 create.sh
 Makefile
+luacov.stats.out
 nwunsch-1.0-1.rockspec
 nwunsch-1.0-1.src.rock

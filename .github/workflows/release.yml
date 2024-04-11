@@ -21,6 +21,7 @@ jobs:
           luarocks install luacheck
       - name: Run linter
         run: luacheck .
+
   create-release:
     needs: audit
     if: github.repository_owner == '0xnu'
