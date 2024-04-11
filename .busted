@@ -1,0 +1,7 @@
+-- .busted
+return {
+  default = {
+    verbose = true,
+    coverage = true
+  }
+}
