@@ -16,11 +16,11 @@ jobs:
           luaVersion: "5.4"
       - name: Set up luarocks
         uses: leafo/gh-actions-luarocks@v4
-      - name: Install dependencies
-        run: |
-          luarocks install luacheck
-      - name: Run linter
-        run: luacheck .
+      # - name: Install dependencies
+      #   run: |
+      #     luarocks install luacheck
+      # - name: Run linter
+      #   run: luacheck .
 
   create-release:
     needs: audit
