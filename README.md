@@ -40,6 +40,8 @@ print("Alignment 1:", align1)
 print("Alignment 2:", align2)
 ```
 
+> Use Case: Execute the `gene.lua` sample code in the [examples](./examples/gene.lua) directory.
+
 ### License
 
 This project is licensed under the [MIT License](./LICENSE).
@@ -47,3 +49,5 @@ This project is licensed under the [MIT License](./LICENSE).
 ### Copyright
 
 (c) 2024 [Finbarrs Oketunji](https://finbarrs.eu).
+
+📚📚 Go and [purchase a Lua book](https://feistyduck.gumroad.com/).

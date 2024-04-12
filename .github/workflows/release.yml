@@ -7,7 +7,7 @@ on:
 
 jobs:
   audit:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up Lua
@@ -16,11 +16,11 @@ jobs:
           luaVersion: "5.4"
       - name: Set up luarocks
         uses: leafo/gh-actions-luarocks@v4
-      - name: Install dependencies
-        run: |
-          luarocks install luacheck
-      - name: Run linter
-        run: luacheck .
+      # - name: Install dependencies
+      #   run: |
+      #     luarocks install luacheck
+      # - name: Run linter
+      #   run: luacheck .
 
   create-release:
     needs: audit

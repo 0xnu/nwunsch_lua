@@ -1,4 +1,4 @@
--- example/gene.lua
+-- examples/gene.lua
 
 -- The alignment score of -405038 indicates that the two sequences
 -- compared have high dissimilarity and little to no meaningful alignment.

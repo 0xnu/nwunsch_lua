@@ -1,4 +1,4 @@
--- init.lua
+-- nwunsch/init.lua
 local nwunsch = {}
 
 function nwunsch.NeedlemanWunsch(seq1, seq2, match, mismatch, gap)
