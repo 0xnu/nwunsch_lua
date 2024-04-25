@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v[0-9]+.*
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Lua
+        uses: leafo/gh-actions-lua@v9
+        with:
+          luaVersion: "5.4"
+      - name: Set up luarocks
+        uses: leafo/gh-actions-luarocks@v4
+      # - name: Install dependencies
+      #   run: |
+      #     luarocks install luacheck
+      # - name: Run linter
+      #   run: luacheck .
+
+  create-release:
+    needs: audit
+    if: github.repository_owner == '0xnu'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: taiki-e/create-gh-release-action@v1
+        with:
+          changelog: CHANGELOG.md
+          branch: main
+          token: ${{ secrets.OXNU_TOKEN }}
